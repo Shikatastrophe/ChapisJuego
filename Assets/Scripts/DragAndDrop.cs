@@ -4,9 +4,13 @@ public class DragAndDrop : MonoBehaviour
 {
     Collider2D col;
 
-    Vector3 startDragPosition;
+    public Vector3 startDragPosition;
 
     Camera cam;
+
+    public bool isGrabbing;
+
+    private Vector3 velocity = Vector3.zero;
 
     public enum IngredientType { normal,meat };
     public IngredientType type;
@@ -15,21 +19,40 @@ public class DragAndDrop : MonoBehaviour
     {
         cam = Camera.main;
         col = GetComponent<Collider2D>();
+        isGrabbing = true;
+        startDragPosition = transform.position;
     }
 
     private void OnMouseDown()
     {
         startDragPosition = transform.position;
         transform.position = GetMousePosInWorldSpace();
+        isGrabbing = true;
     }
 
-    private void OnMouseDrag()
+    private void Update()
     {
-        transform.position = GetMousePosInWorldSpace();
+
+        Debug.Log(startDragPosition);
+        if (isGrabbing)
+        {
+            transform.position = Vector3.SmoothDamp(transform.position, GetMousePosInWorldSpace(), ref velocity , 0.1f);
+            //transform.position = GetMousePosInWorldSpace();
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            MouseRelease();
+        }
     }
 
     private void OnMouseUp()
     {
+        MouseRelease();
+    }
+
+    public void MouseRelease()
+    {
+        isGrabbing = false;
         col.enabled = false;
         Collider2D hit = Physics2D.OverlapPoint(transform.position);
         col.enabled = true;

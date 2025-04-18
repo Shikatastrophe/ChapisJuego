@@ -7,15 +7,21 @@ public class DropAreas : MonoBehaviour, IObjectDropArea
 
     public void OnObjectDrop(DragAndDrop obj)
     {
-        obj.transform.position = transform.position;
+        
         switch (dropArea)
         {
             case DrpAreas.Assembly:
+                obj.transform.position = transform.position;
                 break;
             case DrpAreas.Cooking:
-                obj.StartCooking();
+                if (obj.type == DragAndDrop.IngredientType.meat)
+                {
+                    obj.transform.position = transform.position;
+                    obj.StartCooking();
+                }
                 break;
             case DrpAreas.Trash:
+                obj.transform.position = transform.position;
                 break;
         }
     }
