@@ -6,13 +6,17 @@ public class DragAndDrop : MonoBehaviour
 
     public Vector3 startDragPosition;
 
+    public Vector3 cachedPosition;
+
     Camera cam;
 
     public bool isGrabbing;
 
     private Vector3 velocity = Vector3.zero;
 
-    public enum IngredientType { normal,meat };
+    bool returning;
+
+    public enum IngredientType { other,meat,burger };
     public IngredientType type;
 
     private void Start()
@@ -21,18 +25,21 @@ public class DragAndDrop : MonoBehaviour
         col = GetComponent<Collider2D>();
         isGrabbing = true;
         startDragPosition = transform.position;
+        cachedPosition = startDragPosition;
+        returning = false;
     }
 
     private void OnMouseDown()
     {
         startDragPosition = transform.position;
+        cachedPosition = startDragPosition;
         transform.position = GetMousePosInWorldSpace();
         isGrabbing = true;
+        returning = false;
     }
 
     private void Update()
     {
-
         Debug.Log(startDragPosition);
         if (isGrabbing)
         {
@@ -43,6 +50,7 @@ public class DragAndDrop : MonoBehaviour
         {
             MouseRelease();
         }
+        if (returning) transform.position = Vector3.SmoothDamp(transform.position, startDragPosition, ref velocity, 0.1f);
     }
 
     private void OnMouseUp()
@@ -62,8 +70,15 @@ public class DragAndDrop : MonoBehaviour
         }
         else
         {
-            transform.position = startDragPosition;
+            //transform.position = startDragPosition;
+            ReturnToSender();
+            //Invoke(nameof(StopReturning), 5f);
         }
+    }
+
+    public void ReturnToSender()
+    {
+        returning = true;
     }
 
     public Vector3 GetMousePosInWorldSpace()
@@ -78,5 +93,10 @@ public class DragAndDrop : MonoBehaviour
         if (type != IngredientType.meat) { return; }
         SpriteRenderer sprite = GetComponent<SpriteRenderer>();
         sprite.color = Color.black;
+    }
+
+    public void Kill()
+    {
+        Destroy(gameObject);
     }
 }
