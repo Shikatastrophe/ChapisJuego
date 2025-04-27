@@ -25,6 +25,7 @@ public class CanvasSystem : MonoBehaviour
         {
             StackPanels.Push(canvasInScene[indexPanels]);
             canvasInScene[indexPanels].enabled = indexPanels == canvasToEnable;
+            Debug.Log(canvasToEnable);
         }
     }
 }
