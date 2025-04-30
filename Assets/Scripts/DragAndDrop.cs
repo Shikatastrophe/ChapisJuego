@@ -74,6 +74,10 @@ public class DragAndDrop : MonoBehaviour
             ReturnToSender();
             //Invoke(nameof(StopReturning), 5f);
         }
+        if (hit != null && hit.TryGetComponent(out IInteractable interactable))
+        {
+            interactable.OnInteract(this.gameObject);
+        }
     }
 
     public void ReturnToSender()

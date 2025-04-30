@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class DropAreas : MonoBehaviour, IObjectDropArea
+public class DropAreas : MonoBehaviour, IObjectDropArea, IInteractable
 {
     public enum DrpAreas { Assembly, Cooking, Trash }
     public DrpAreas dropArea;
 
-    public void OnObjectDrop(DragAndDrop obj)
+    public virtual void OnObjectDrop(DragAndDrop obj)
     {
         switch (dropArea)
         {
@@ -17,7 +17,6 @@ public class DropAreas : MonoBehaviour, IObjectDropArea
                 {
                     case DragAndDrop.IngredientType.meat:
                         obj.transform.position = transform.position;
-                        obj.StartCooking();
                         break;
                     case DragAndDrop.IngredientType.other:
                         //obj.Kill();
@@ -33,5 +32,9 @@ public class DropAreas : MonoBehaviour, IObjectDropArea
                 obj.Kill();
                 break;
         }
+    }
+
+    public virtual void OnInteract(GameObject obj)
+    {
     }
 }
