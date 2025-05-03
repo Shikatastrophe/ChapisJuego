@@ -50,7 +50,14 @@ public class DragAndDrop : MonoBehaviour
         {
             MouseRelease();
         }
-        if (returning) transform.position = Vector3.SmoothDamp(transform.position, startDragPosition, ref velocity, 0.1f);
+        if (returning)
+        {
+            transform.position = Vector3.SmoothDamp(transform.position, startDragPosition, ref velocity, 0.1f);
+            if(Vector3.Distance(transform.position, startDragPosition) < 0.1f)
+            {
+                CheckForAreas();
+            }
+        }
     }
 
     private void OnMouseUp()
@@ -61,6 +68,11 @@ public class DragAndDrop : MonoBehaviour
     public void MouseRelease()
     {
         isGrabbing = false;
+        CheckForAreas();
+    }
+
+    public void CheckForAreas()
+    {
         col.enabled = false;
         Collider2D hit = Physics2D.OverlapPoint(transform.position);
         col.enabled = true;
