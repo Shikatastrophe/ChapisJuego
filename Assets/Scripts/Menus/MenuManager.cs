@@ -13,8 +13,11 @@ public class MenuManager : MonoBehaviour
     public int[] figuraReceta;
     public int[] figuraJugador;
 
+    AudioManager audioManager;
+
     private void Start()
     {
+        
         // Este es un stack para paneles
         stackPanels = new Stack<Canvas>();
         stackPanels.Push(canvasInScene[0]);

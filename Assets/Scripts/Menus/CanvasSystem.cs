@@ -14,7 +14,7 @@ public class CanvasSystem : MonoBehaviour
     {
         if (StackPanels.Count > 1 && Input.GetKeyDown(KeyCode.Escape))
         {
-
+            
             StackPanels.Pop().enabled = false;
             StackPanels.Peek().enabled = true;
         }
