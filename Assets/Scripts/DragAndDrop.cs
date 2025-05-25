@@ -2,8 +2,14 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
+    [Header("DATA DO NOT TOUCH")]
+    public IngredientSO ingredientdata;
+    public int ingId;
+
+
     Collider2D col;
 
+    [Header("You can touch this :)")]
     public Vector3 startDragPosition;
 
     public Vector3 cachedPosition;
@@ -16,18 +22,33 @@ public class DragAndDrop : MonoBehaviour
 
     bool returning;
 
+    SpriteRenderer SpRend;
+
     public enum IngredientType { other,meat,burger };
     public IngredientType type;
 
+    bool cookedMeat;
+
     private void Start()
     {
-        cam = Camera.main;
-        col = GetComponent<Collider2D>();
+        SetData();
         isGrabbing = true;
         startDragPosition = transform.position;
         cachedPosition = startDragPosition;
         returning = false;
+        cookedMeat = false;
     }
+
+    public void SetData()
+    {
+        cam = Camera.main;
+        col = GetComponent<Collider2D>();
+        SpRend = GetComponent<SpriteRenderer>();
+        SpRend.sprite = ingredientdata.ingredient;
+        type = (IngredientType)ingredientdata.type;
+        ingId = ingredientdata.IngID;
+    }
+
 
     private void OnMouseDown()
     {
@@ -102,13 +123,6 @@ public class DragAndDrop : MonoBehaviour
         Vector3 p = cam.ScreenToWorldPoint(Input.mousePosition);
         p.z = 0f;
         return p;
-    }
-
-    public void StartCooking()
-    {
-        if (type != IngredientType.meat) { return; }
-        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
-        sprite.color = Color.black;
     }
 
     public void Kill()

@@ -19,8 +19,12 @@ public class CookingArea : DropAreas
         }
     }
 
+
     public override void OnInteract(GameObject obj)
     {
-        base.OnInteract(obj);
+        if (obj.TryGetComponent<CookingSystem>(out var cook))
+        {
+            cook.isCooking = true;
+        }
     }
 }
