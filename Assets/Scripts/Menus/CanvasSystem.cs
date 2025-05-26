@@ -14,18 +14,25 @@ public class CanvasSystem : MonoBehaviour
     {
         if (StackPanels.Count > 1 && Input.GetKeyDown(KeyCode.Escape))
         {
-            
             StackPanels.Pop().enabled = false;
             StackPanels.Peek().enabled = true;
         }
     }
     public void GotoPanel(int canvasToEnable)
     {
+        StackPanels.Push(canvasInScene[canvasToEnable]);
         for (int indexPanels = 0; indexPanels < canvasInScene.Length; indexPanels++)
-        {
-            StackPanels.Push(canvasInScene[indexPanels]);
+        {         
             canvasInScene[indexPanels].enabled = indexPanels == canvasToEnable;
             Debug.Log(canvasToEnable);
+        }
+    }
+    public void GoBacktoPanel()
+    {
+        if (StackPanels.Count > 1 )
+        {
+            StackPanels.Pop().enabled = false;
+            StackPanels.Peek().enabled = true;
         }
     }
 }
