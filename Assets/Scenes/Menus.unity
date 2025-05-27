@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 59491351}
   - component: {fileID: 59491353}
   - component: {fileID: 59491352}
+  - component: {fileID: 59491354}
   m_Layer: 5
   m_Name: Amely
   m_TagString: Untagged
@@ -360,6 +361,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59491350}
   m_CullTransparentMesh: 1
+--- !u!114 &59491354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59491350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a5fe65b9fcc964083e81ba785ec0d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &159737056
 GameObject:
   m_ObjectHideFlags: 0
