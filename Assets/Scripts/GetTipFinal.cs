@@ -5,7 +5,7 @@ public class GetTipFinal : MonoBehaviour
     public TextMeshProUGUI FinalTip;
     void Start()
     {
-        //FinalTip = PatienceSystem.
+        FinalTip.text = PatienceSystem.totaltip.ToString();
     }
 
     // Update is called once per frame
