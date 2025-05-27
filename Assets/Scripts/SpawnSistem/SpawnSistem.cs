@@ -10,10 +10,6 @@ public class SpawnSistem : QueueSystem
     public bool canMove;
     int waitTime=240;
     private Vector3 velocity;
-    public void Start()
-    {
-
-    }
 
     public void Update()
     {
@@ -23,7 +19,7 @@ public class SpawnSistem : QueueSystem
         }
         if (!clientExist)
         {
-            SpawnCliente();
+            //SpawnCliente();
         }
         if (orderFinished)
         {
@@ -46,6 +42,7 @@ public class SpawnSistem : QueueSystem
     [ContextMenu("clienteAtendido")]
     public void clienteAtendido()
     {
+        //Debug.Log("Cliente atendido");
         canMove = false;
         clienteActual.transform.position = Vector3.SmoothDamp(clienteActual.transform.position, new Vector3(20, 0, 0), ref velocity, 0.5f);
         if (waitTime <= 0)
