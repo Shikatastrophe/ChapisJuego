@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: ea1f4c54ed90f614abf8c624070c216c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3981739475695708725
+    second: HamburguesasHechas_Resultados__0
+  - first:
+      213: 3295684224704825850
+    second: HamburguesasHechas_Resultados__1
+  - first:
+      213: 3229180041438119172
+    second: HamburguesasHechas_Resultados__2
+  - first:
+      213: 2068208739560371010
+    second: HamburguesasHechas_Resultados__3
+  - first:
+      213: 936692949776275272
+    second: HamburguesasHechas_Resultados__4
+  - first:
+      213: -4303250629741529052
+    second: HamburguesasHechas_Resultados__5
+  - first:
+      213: -1874505515245803477
+    second: HamburguesasHechas_Resultados__6
+  - first:
+      213: -5948283146556777200
+    second: HamburguesasHechas_Resultados__7
+  - first:
+      213: -3495770873153199850
+    second: HamburguesasHechas_Resultados__8
+  - first:
+      213: 7735072903145829621
+    second: HamburguesasHechas_Resultados__9
+  - first:
+      213: -1390867111268097393
+    second: HamburguesasHechas_Resultados__10
+  - first:
+      213: 342924584743445728
+    second: HamburguesasHechas_Resultados__11
+  - first:
+      213: -7796085062438442971
+    second: HamburguesasHechas_Resultados__12
+  - first:
+      213: 1620452701927266802
+    second: HamburguesasHechas_Resultados__13
+  - first:
+      213: 3501396700343011222
+    second: HamburguesasHechas_Resultados__14
+  - first:
+      213: -5000350639065624313
+    second: HamburguesasHechas_Resultados__15
+  - first:
+      213: 3075974187634336665
+    second: HamburguesasHechas_Resultados__16
+  - first:
+      213: 8814224725299308979
+    second: HamburguesasHechas_Resultados__17
+  - first:
+      213: -1481579825278987291
+    second: HamburguesasHechas_Resultados__18
+  - first:
+      213: -3259102030905980603
+    second: HamburguesasHechas_Resultados__19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10
+        width: 38
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53a2efcf4faf14730800000000000000
+      internalID: 3981739475695708725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 9
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9c361575f9cbd20800000000000000
+      internalID: 3295684224704825850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 10
+        width: 53
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40543b5832a50dc20800000000000000
+      internalID: 3229180041438119172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__3
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 9
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 243bada04e0c3bc10800000000000000
+      internalID: 2068208739560371010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__4
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 9
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8471707664dcffc00800000000000000
+      internalID: 936692949776275272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__5
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 10
+        width: 24
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 428b7c21a58c744c0800000000000000
+      internalID: -4303250629741529052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__6
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 0
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b28634a5a2b6cf5e0800000000000000
+      internalID: -1874505515245803477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__7
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 9
+        width: 36
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d5a0a5ef3737da0800000000000000
+      internalID: -5948283146556777200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__8
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 9
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 611eb8989e68c7fc0800000000000000
+      internalID: -3495770873153199850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__9
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 9
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f4b1cfb2df785b60800000000000000
+      internalID: 7735072903145829621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__10
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 9
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f82671f3bb5a2bce0800000000000000
+      internalID: -1390867111268097393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__11
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 9
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e4a16ac71052c400800000000000000
+      internalID: 342924584743445728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__12
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 10
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528a0aee0fdbec390800000000000000
+      internalID: -7796085062438442971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__13
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 9
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f952b995210d7610800000000000000
+      internalID: 1620452701927266802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__14
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 9
+        width: 29
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6978bad6fb5779030800000000000000
+      internalID: 3501396700343011222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__15
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 10
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7019816369f2b9ab0800000000000000
+      internalID: -5000350639065624313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__16
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 9
+        width: 37
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9932738f93e00ba20800000000000000
+      internalID: 3075974187634336665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__17
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 9
+        width: 35
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b92ee910ba625a70800000000000000
+      internalID: 8814224725299308979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__18
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 29
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e35cd7affe507be0800000000000000
+      internalID: -1481579825278987291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HamburguesasHechas_Resultados__19
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 9
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 549481968f755c2d0800000000000000
+      internalID: -3259102030905980603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HamburguesasHechas_Resultados__0: 3981739475695708725
+      HamburguesasHechas_Resultados__1: 3295684224704825850
+      HamburguesasHechas_Resultados__10: -1390867111268097393
+      HamburguesasHechas_Resultados__11: 342924584743445728
+      HamburguesasHechas_Resultados__12: -7796085062438442971
+      HamburguesasHechas_Resultados__13: 1620452701927266802
+      HamburguesasHechas_Resultados__14: 3501396700343011222
+      HamburguesasHechas_Resultados__15: -5000350639065624313
+      HamburguesasHechas_Resultados__16: 3075974187634336665
+      HamburguesasHechas_Resultados__17: 8814224725299308979
+      HamburguesasHechas_Resultados__18: -1481579825278987291
+      HamburguesasHechas_Resultados__19: -3259102030905980603
+      HamburguesasHechas_Resultados__2: 3229180041438119172
+      HamburguesasHechas_Resultados__3: 2068208739560371010
+      HamburguesasHechas_Resultados__4: 936692949776275272
+      HamburguesasHechas_Resultados__5: -4303250629741529052
+      HamburguesasHechas_Resultados__6: -1874505515245803477
+      HamburguesasHechas_Resultados__7: -5948283146556777200
+      HamburguesasHechas_Resultados__8: -3495770873153199850
+      HamburguesasHechas_Resultados__9: 7735072903145829621
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
