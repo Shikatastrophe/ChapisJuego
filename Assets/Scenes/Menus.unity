@@ -3938,7 +3938,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Akin Rivas Catro
+  m_text: Akin Rivas Castro
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 317ac6c1e6ade4a44b157d4c13d0c620, type: 2}
   m_sharedMaterial: {fileID: 5307454611099863562, guid: 317ac6c1e6ade4a44b157d4c13d0c620, type: 2}

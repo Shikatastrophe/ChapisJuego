@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ClientController : DropAreas
 {
@@ -51,10 +52,19 @@ Raw/Burnt Meat 500
 
     public PatienceSystem patience;
 
+    public int NumOfClients = 10;
+
+    public Sprite[] sprites;
+
+    public SpriteRenderer RecipeWant;
+
     private void Start()
     {
         // Initialize the first client
         ChangeClient(-1);
+        Invoke(nameof(ReturnRecipe), 3);
+        RecipeWant.sprite = sprites[currentRecipeIndex];
+
     }
 
     public override void OnObjectDrop(DragAndDrop obj)
@@ -72,6 +82,17 @@ Raw/Burnt Meat 500
                 ChangeClient(currentRecipeIndex);
                 spawnSistem.orderFinished =  true;
                 patience.orderCompleated = true;
+
+                NumOfClients--;
+
+                CheckForRemainingClients();
+
+                RecipeWant.enabled = false;
+
+                RecipeWant.sprite = sprites[currentRecipeIndex];
+
+                Invoke(nameof(ReturnRecipe), 3);
+
                 //Debug.Log("Burger served!");
             }
             else
@@ -86,6 +107,20 @@ Raw/Burnt Meat 500
             obj.ReturnToSender();
         }
     }
+
+    void ReturnRecipe()
+    {
+        RecipeWant.enabled = true;
+    }
+
+    public void CheckForRemainingClients()
+    {
+        if(NumOfClients <= 0)
+        {
+            SceneManager.LoadScene("Score");
+        }
+    }
+
 
     public void ChangeClient(int lastclient)
     {

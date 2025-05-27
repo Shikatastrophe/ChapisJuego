@@ -5,7 +5,7 @@ public class PatienceSystem : MonoBehaviour
 {
     public float patienceTimer = 40f;
     public float tip;
-    public float totaltip;
+    public static float totaltip;
     public bool orderCompleated;
     public TextMeshProUGUI text;
     public TextMeshProUGUI tipText;
@@ -13,6 +13,7 @@ public class PatienceSystem : MonoBehaviour
     void Start()
     {
         tip = 30f;
+        totaltip = 0f;
     }
 
    
@@ -29,11 +30,11 @@ public class PatienceSystem : MonoBehaviour
         tipText.text = ("Tip: " + totaltip);    
         text.text = ("Paciencia: \n"+patienceTimer.ToString("N0"));
         patienceTimer -= Time.deltaTime;
-        if(patienceTimer<= 20)
+        if(patienceTimer<= 30)
         {
             tip = 20;
         }
-        if(patienceTimer<=10)
+        if(patienceTimer<=20)
         {
             tip = 10;
         }
@@ -45,7 +46,7 @@ public class PatienceSystem : MonoBehaviour
     }
     public void CompleteOrder()
     {
-        patienceTimer = 40f;
+        patienceTimer = 90f;
         totaltip += tip;
         tip = 30f;
         orderCompleated = false;
