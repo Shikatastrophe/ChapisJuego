@@ -1,11 +1,14 @@
 using UnityEngine;
+using TMPro;
 
 public class PatienceSystem : MonoBehaviour
 {
     public float patienceTimer = 40f;
     public float tip;
     public float totaltip;
-    bool orderCompleated;
+    public bool orderCompleated;
+    public TextMeshProUGUI text;
+
     void Start()
     {
         tip = 30f;
@@ -15,10 +18,6 @@ public class PatienceSystem : MonoBehaviour
     void Update()
     {
         Patience();
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            orderCompleated = true;
-        }
         if(orderCompleated)
         {
             CompleteOrder();
@@ -26,6 +25,7 @@ public class PatienceSystem : MonoBehaviour
     }
     public void Patience()
     {
+        text.text = ("Paciencia: \n"+patienceTimer.ToString("N0"));
         patienceTimer -= Time.deltaTime;
         if(patienceTimer<= 20)
         {
@@ -37,7 +37,7 @@ public class PatienceSystem : MonoBehaviour
         }
         if(patienceTimer<=0)
         {
-            LostOrder();
+            tip = 0;
         }
     }
     public void CompleteOrder()
@@ -47,11 +47,5 @@ public class PatienceSystem : MonoBehaviour
         tip = 30f;
         orderCompleated = false;
     }
-    public void LostOrder()
-    {
-        Debug.Log("You Lost an order");
-        totaltip -= 15f;
-        orderCompleated = true;
-        
-    }
+
 }

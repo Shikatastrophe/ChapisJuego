@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class ClientController : DropAreas
 {
-   /* List<int[]> recepies = new List<int[]>
+   List<int[]> recepies = new List<int[]>
     {
         new int[] { 0 }, // Example recipe: item IDs
         new int[] { 500 },
         new int[] { 1,4,0 }
-    };*/
+    };
     
-    List<int[]> recepies = new List<int[]>
+    /*List<int[]> recepies = new List<int[]>
     {
         new int[] { 1,4,8,12,9,2,3,5,11,0, 10}, // Nanis 0
         new int[] { 1,4,8,12,9,13,2,3,5,11,0, 10}, //Junior 1
@@ -49,6 +49,8 @@ Raw/Burnt Meat 500
 
     public SpawnSistem spawnSistem;
 
+    public PatienceSystem patience;
+
     private void Start()
     {
         // Initialize the first client
@@ -69,6 +71,7 @@ Raw/Burnt Meat 500
                 obj.Kill();
                 ChangeClient(currentRecipeIndex);
                 spawnSistem.orderFinished =  true;
+                patience.orderCompleated = true;
                 //Debug.Log("Burger served!");
             }
             else
