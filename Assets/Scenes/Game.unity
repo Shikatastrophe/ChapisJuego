@@ -1554,8 +1554,8 @@ MonoBehaviour:
   oldburger: {fileID: 0}
   offset: 0
   rendereroffset: 0
-  side1Offset: 0
-  side2Offset: 0
+  side1Offset: 1
+  side2Offset: 2
   side1: 0
   mainoffset: 0.3
 --- !u!50 &1630808044

@@ -5,28 +5,29 @@ using UnityEngine;
 
 public class ClientController : DropAreas
 {
-    List<int[]> recepies = new List<int[]>
+   /* List<int[]> recepies = new List<int[]>
     {
         new int[] { 0 }, // Example recipe: item IDs
         new int[] { 500 },
         new int[] { 1,4,0 }
-    };
+    };*/
     
-    List<int[]> Truerecepies = new List<int[]>
+    List<int[]> recepies = new List<int[]>
     {
-        new int[] { 1,4,8,12,9,4,3,5,11,0 }, // Example recipe: item IDs
-        new int[] { 1,4,8,12,9,13,4,3,5,11,0 },
-        new int[] { 1,4,8,12,9,6,4,3,5,11,0}
+        new int[] { 1,4,8,12,9,2,3,5,11,0, 10}, // Nanis 0
+        new int[] { 1,4,8,12,9,13,2,3,5,11,0, 10}, //Junior 1
+        new int[] { 1,4,8,12,9,6,2,3,5,11,0, 10}, //Fabis 2
+        new int[] { 1,4,4,8,12,9,9,7,13,2,3,5,11,0, 10 }//La especial 3
     };
     /*
 
 Ingredient ID List 
 
-BottomBun 1
 TopBun 0
-Meat 2
+BottomBun 1
+Tomato 2
 Onion 3
-Tomato 4
+Meat 4
 Lettuce 5
 Pineapple 6
 Oaxaca Cheese 7
@@ -39,7 +40,7 @@ French Fries 10
     ketchup 12
     guacamole 13
 
-Raw/Burnt Meat 50
+Raw/Burnt Meat 500
 
 */
     // public GameObject[] Clients;

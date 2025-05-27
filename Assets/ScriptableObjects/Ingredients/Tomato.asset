@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Tomato
   m_EditorClassIdentifier: 
   ingredient: {fileID: -7872747453544689701, guid: 2fd0613a44a20b843b4f3299fbf79051, type: 3}
-  IngID: 4
+  IngID: 2
   type: 0

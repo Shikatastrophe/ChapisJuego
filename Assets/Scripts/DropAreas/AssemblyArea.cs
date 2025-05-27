@@ -51,17 +51,20 @@ public class AssemblyArea : DropAreas
                     {
                         obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = side1Offset;
                         side1 = true;
+                        obj.transform.position = new Vector2(oldburger.transform.position.x + side1Offset, oldburger.transform.position.y);
+
                     }
                     else
                     {
                         obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = side2Offset;
+                        obj.transform.position = new Vector2(oldburger.transform.position.x + side2Offset, oldburger.transform.position.y);
+
                     }
                     obj.gameObject.GetComponent<Collider2D>().enabled = false;
                     obj.gameObject.GetComponent<CookingSystem>().enabled = false;
-                    obj.transform.position = new Vector2(oldburger.transform.position.x, oldburger.transform.position.y + offset);
                     obj.transform.parent = oldburger.transform;
-                    offset += mainoffset;
-                    rendereroffset++;
+                    //offset += mainoffset;
+                    //rendereroffset++;
                     obj.enabled = false;
 
                     //Add the new ingredient to the burger
