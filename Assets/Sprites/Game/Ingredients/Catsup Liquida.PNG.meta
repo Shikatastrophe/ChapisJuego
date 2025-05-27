@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 704d984e36a9d3c4aa1c27bcca2479d1
+guid: c108814861847184080a48944390d044
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8263000507370991982
-    second: Cebolla_0
+      213: 5398951215905128438
+    second: Catsup Liquida_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cebolla_0
+      name: Catsup Liquida_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 62
-        width: 280
-        height: 193
+        x: 24
+        y: 113
+        width: 263
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e6178b4ae231ca270800000000000000
-      internalID: 8263000507370991982
+      spriteID: 6ff30b7a68decea40800000000000000
+      internalID: 5398951215905128438
       vertices: []
       indices: 
       edges: []

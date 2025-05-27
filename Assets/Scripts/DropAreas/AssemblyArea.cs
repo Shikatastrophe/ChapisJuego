@@ -10,6 +10,8 @@ public class AssemblyArea : DropAreas
 
     public int rendereroffset;
 
+    public float mainoffset;
+
     private void Start()
     {
         burgeronPlace = false;
@@ -26,7 +28,7 @@ public class AssemblyArea : DropAreas
             if(oldburger == null || oldburger != obj.gameObject)
             {
                 oldburger = obj.gameObject;
-                offset = 0.2f;
+                offset = mainoffset;
                 rendereroffset = 6;
                 Debug.Log("NEW BURGER");
             }
@@ -40,7 +42,7 @@ public class AssemblyArea : DropAreas
                 obj.gameObject.GetComponent<CookingSystem>().enabled = false;
                 obj.transform.position = new Vector2(oldburger.transform.position.x, oldburger.transform.position.y + offset);
                 obj.transform.parent = oldburger.transform;
-                offset += 0.2f;
+                offset += mainoffset;
                 rendereroffset ++;
                 obj.enabled = false;
             }

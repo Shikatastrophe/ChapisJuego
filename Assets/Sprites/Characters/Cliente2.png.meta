@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b8597b1606873ae49ad1ce1319365e02
+guid: 134c221375a2c3140b3f8eed317cd1c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 521888659713571253
-    second: TapaDePan_0
+      213: -2798542880150864417
+    second: Cliente2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 85
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TapaDePan_0
+      name: Cliente2_0
       rect:
         serializedVersion: 2
-        x: 27
-        y: 50
-        width: 243
-        height: 176
+        x: 0
+        y: 0
+        width: 609
+        height: 662
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5b9388e88fe1e3700800000000000000
-      internalID: 521888659713571253
+      spriteID: fddb8ebe3149929d0800000000000000
+      internalID: -2798542880150864417
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 98688fba3bad3bc42a18d1ca830be206
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TapaDePan_0: 521888659713571253
+      Cliente2_0: -2798542880150864417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

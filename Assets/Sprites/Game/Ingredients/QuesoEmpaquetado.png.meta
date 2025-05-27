@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c031533d2a8c5b749809b95ff8be3a85
+guid: 3253f2447ab2e4c4eb25d2af428905fd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9156873604825448054
-    second: Jitomate_0
+      213: -1955887117959316349
+    second: QuesoEmpaquetado_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Jitomate_0
+      name: QuesoEmpaquetado_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 54
-        width: 279
-        height: 219
+        x: 1
+        y: 33
+        width: 299
+        height: 227
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a818a3bb8ff3ce080800000000000000
-      internalID: -9156873604825448054
+      spriteID: 38cb549670b4bd4e0800000000000000
+      internalID: -1955887117959316349
       vertices: []
       indices: 
       edges: []
