@@ -5,7 +5,8 @@ public class IngredientSO : ScriptableObject
 {
     public Sprite ingredient;
     public int IngID;
-    public enum IngredientType { other, meat, burger };
+    public enum IngredientType { other, meat, burger, side };
+    
     public IngredientType type;
 
 }

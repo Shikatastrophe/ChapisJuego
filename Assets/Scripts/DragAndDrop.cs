@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
@@ -9,7 +11,7 @@ public class DragAndDrop : MonoBehaviour
 
     Collider2D col;
 
-    [Header("You can touch this :)")]
+    [Header("You can touch this :)")]  //No , i dont want to touch it
     public Vector3 startDragPosition;
 
     public Vector3 cachedPosition;
@@ -24,8 +26,10 @@ public class DragAndDrop : MonoBehaviour
 
     SpriteRenderer SpRend;
 
-    public enum IngredientType { other,meat,burger };
+    public enum IngredientType { other,meat,burger, side };
     public IngredientType type;
+
+    public List<int> recipe = new List<int>();
 
     bool cookedMeat;
 
@@ -61,7 +65,7 @@ public class DragAndDrop : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(startDragPosition);
+        //Debug.Log(startDragPosition);
         if (isGrabbing)
         {
             transform.position = Vector3.SmoothDamp(transform.position, GetMousePosInWorldSpace(), ref velocity , 0.1f);
@@ -128,5 +132,11 @@ public class DragAndDrop : MonoBehaviour
     public void Kill()
     {
         Destroy(gameObject);
+    }
+
+    internal void AddIngredient(int ingID)
+    {
+        recipe.Add(ingID);
+        Debug.Log("Added ingredient with ID: " + ingID + " to recipe. Current recipe: " + string.Join(", ", recipe));
     }
 }

@@ -15,6 +15,7 @@ public class LogicToUseQueueSystem : QueueSystem
     De igual forma comento mejor este codigo que se elminara
     que luego tengamos que borrar los comentarios en el otro
     */
+    /*
     public GameObject[] clients;
 
     [ContextMenu("EjectuarAgregarACola")]
@@ -24,7 +25,7 @@ public class LogicToUseQueueSystem : QueueSystem
         AddClients(clients);
         Debug.Log("agregado a cola");
     }
-
+    */
     [ContextMenu("ConseguirDatos")]
     public void ConseguirClientes(){
         //Esta funcion sirve para que podamos leer la gente dentro del queue

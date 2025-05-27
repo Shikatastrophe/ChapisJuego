@@ -155,6 +155,7 @@ MonoBehaviour:
   cachedPosition: {x: 0, y: 0, z: 0}
   isGrabbing: 0
   type: 1
+  recipe: 
 --- !u!114 &5227665847906638513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +171,7 @@ MonoBehaviour:
   cookedsprite: {fileID: -3271936335108606742, guid: 0d057d066b6595e4c9e99a12b53ab2d5, type: 3}
   burntSprite: {fileID: -2299055209876009928, guid: b8fc84c47fbd36741b1bd2d791a1aeea, type: 3}
   isCooking: 0
-  TimeForCook: 10
+  TimeForCook: 5
 --- !u!50 &2945591092225046741
 Rigidbody2D:
   serializedVersion: 5

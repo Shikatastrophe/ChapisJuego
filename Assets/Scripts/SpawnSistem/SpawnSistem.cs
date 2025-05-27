@@ -66,7 +66,8 @@ public class SpawnSistem : QueueSystem
         clientExist=false;
         isGoingOut = false;
         orderFinished =false;
-        Destroy(clienteActual);
+        canMove = true;
+        Destroy(clientGoingOut);
     }
 
 }

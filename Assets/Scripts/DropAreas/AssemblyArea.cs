@@ -8,7 +8,10 @@ public class AssemblyArea : DropAreas
 
     public float offset;
 
-    public int rendereroffset;
+    public int rendereroffset,side1Offset, side2Offset;
+
+    public bool side1;
+
 
     public float mainoffset;
 
@@ -19,7 +22,7 @@ public class AssemblyArea : DropAreas
 
     public override void OnObjectDrop(DragAndDrop obj)
     {
-        if (!burgeronPlace)
+        if (!burgeronPlace && obj.type != DragAndDrop.IngredientType.side)
         {
             obj.transform.position = transform.position;
             obj.type = DragAndDrop.IngredientType.burger;
@@ -31,20 +34,55 @@ public class AssemblyArea : DropAreas
                 offset = mainoffset;
                 rendereroffset = 6;
                 Debug.Log("NEW BURGER");
+
+                side1 = false;
+
+                oldburger.GetComponent<DragAndDrop>().AddIngredient(obj.ingId);
             }
         }
         else
         {
+            
             if (obj.type != DragAndDrop.IngredientType.burger)
             {
-                obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = rendereroffset;
-                obj.gameObject.GetComponent<Collider2D>().enabled = false;
-                obj.gameObject.GetComponent<CookingSystem>().enabled = false;
-                obj.transform.position = new Vector2(oldburger.transform.position.x, oldburger.transform.position.y + offset);
-                obj.transform.parent = oldburger.transform;
-                offset += mainoffset;
-                rendereroffset ++;
-                obj.enabled = false;
+                if (obj.type == DragAndDrop.IngredientType.side)
+                {
+                    if (side1==false)
+                    {
+                        obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = side1Offset;
+                        side1 = true;
+                    }
+                    else
+                    {
+                        obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = side2Offset;
+                    }
+                    obj.gameObject.GetComponent<Collider2D>().enabled = false;
+                    obj.gameObject.GetComponent<CookingSystem>().enabled = false;
+                    obj.transform.position = new Vector2(oldburger.transform.position.x, oldburger.transform.position.y + offset);
+                    obj.transform.parent = oldburger.transform;
+                    offset += mainoffset;
+                    rendereroffset++;
+                    obj.enabled = false;
+
+                    //Add the new ingredient to the burger
+                    oldburger.GetComponent<DragAndDrop>().AddIngredient(obj.ingId);
+                }
+                else
+                {
+                    obj.gameObject.GetComponent<SpriteRenderer>().sortingOrder = rendereroffset;
+                    obj.gameObject.GetComponent<Collider2D>().enabled = false;
+                    obj.gameObject.GetComponent<CookingSystem>().enabled = false;
+                    obj.transform.position = new Vector2(oldburger.transform.position.x, oldburger.transform.position.y + offset);
+                    obj.transform.parent = oldburger.transform;
+                    offset += mainoffset;
+                    rendereroffset++;
+                    obj.enabled = false;
+
+                    //Add the new ingredient to the burger
+                    oldburger.GetComponent<DragAndDrop>().AddIngredient(obj.ingId);
+
+                }
+
             }
         }
     }
