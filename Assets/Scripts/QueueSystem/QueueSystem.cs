@@ -3,17 +3,15 @@ using System.Collections.Generic;
 
 public class QueueSystem : MonoBehaviour 
 {
-    public Queue<object> ClientsQueue = new Queue<object>();
+    public Queue<GameObject> ClientsQueue = new Queue<GameObject>();
 
-    public void AddClients(object[] ClientsToAdd){
-        if(ClientsToAdd != null){
-            foreach(object ClientToAdd in ClientsToAdd){
-                ClientsQueue.Enqueue(ClientToAdd);
-            }
+    public void AddClients(GameObject ClientToAdd){
+        if(ClientToAdd != null){
+            ClientsQueue.Enqueue(ClientToAdd);
         }
     }
 
-    public object GetNextClient(){
+    public GameObject GetNextClient(){
         if(ClientsQueue.Count > 0){
             return ClientsQueue.Dequeue();
         }else{
@@ -21,7 +19,7 @@ public class QueueSystem : MonoBehaviour
         }
     }
 
-    public object[] GetAllClients(){
+    public GameObject[] GetAllClients(){
         if(ClientsQueue.Count > 0){
             return ClientsQueue.ToArray();
         }else{
@@ -29,7 +27,7 @@ public class QueueSystem : MonoBehaviour
         }
     }
 
-    public object PeekClients(){
+    public GameObject PeekClients(){
         if(ClientsQueue.Count > 0){
             return ClientsQueue.Peek();
         }else{
