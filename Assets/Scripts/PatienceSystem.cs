@@ -3,12 +3,14 @@ using TMPro;
 
 public class PatienceSystem : MonoBehaviour
 {
-    public float patienceTimer = 40f;
+    public float patienceTimer;
     public float tip;
     public static float totaltip;
     public bool orderCompleated;
     public TextMeshProUGUI text;
     public TextMeshProUGUI tipText;
+    int minutes;
+    int seconds;
 
     void Start()
     {
@@ -28,9 +30,15 @@ public class PatienceSystem : MonoBehaviour
     public void Patience()
     {
         tipText.text = ("Tip: " + totaltip);    
-        text.text = ("Paciencia: \n"+patienceTimer.ToString("N0"));
+        //("Paciencia: \n"+patienceTimer.ToString("N0"));
         patienceTimer -= Time.deltaTime;
-        if(patienceTimer<= 30)
+        minutes = Mathf.FloorToInt(patienceTimer / 60);
+        seconds = Mathf.FloorToInt(patienceTimer % 60);
+
+        text.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+
+        if (patienceTimer<= 30)
         {
             tip = 20;
         }
@@ -46,7 +54,7 @@ public class PatienceSystem : MonoBehaviour
     }
     public void CompleteOrder()
     {
-        patienceTimer = 90f;
+        patienceTimer = 120f;
         totaltip += tip;
         tip = 30f;
         orderCompleated = false;
