@@ -10,10 +10,10 @@ public class SpawnSistem : QueueSystem
     public bool clientExist;
     public bool orderFinished;
     public bool canMove;
-    int waitTime=240;
+    int waitTime=60;
     private Vector3 velocity;
 
-    public void Update()
+    public void FixedUpdate()
     {
         if (canMove)
         {
@@ -51,13 +51,13 @@ public class SpawnSistem : QueueSystem
         {
             clientGoingOut = GetNextClient();
         }
-        clientGoingOut.transform.position = Vector3.SmoothDamp(clientGoingOut.transform.position, new Vector3(20, 0, 0), ref velocity, 0.5f);
+        clientGoingOut.transform.position = Vector3.SmoothDamp(clientGoingOut.transform.position, new Vector3(20, 0, 0), ref velocity, 0.5f) ;
 
         isGoingOut = true;
         if (waitTime <= 0)
         {
             cleinteExplotar();
-            waitTime = 240;
+            waitTime = 60;
         }
         waitTime--;
     }

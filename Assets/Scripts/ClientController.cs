@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ClientController : DropAreas
 {
+    /*
     List<int[]> recepies = new List<int[]>
     {
         new int[] { 0 }, // Example recipe: item IDs
@@ -13,10 +14,10 @@ public class ClientController : DropAreas
         new int[] { 1,4,0 }
     };
     
-   /*
+    */
     List<int[]> recepies = new List<int[]>
     {
-        new int[] { 1,4,8,12,9,2,3,5,11,0, 10}, // Nanis 0
+        new int[] { 1,4,8,12,2,3,5,11,0, 10}, // Nanis 0
         new int[] { 1,4,8,12,9,13,2,3,5,11,0, 10}, //Junior 1
         new int[] { 1,4,8,12,9,6,2,3,5,11,0, 10}, //Fabis 2
         new int[] { 1,4,4,8,12,9,9,7,13,2,3,5,11,0, 10 }//La especial 3
