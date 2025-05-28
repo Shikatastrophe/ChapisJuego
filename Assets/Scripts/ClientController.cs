@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class ClientController : DropAreas
 {
-   /*List<int[]> recepies = new List<int[]>
+    List<int[]> recepies = new List<int[]>
     {
         new int[] { 0 }, // Example recipe: item IDs
         new int[] { 500 },
         new int[] { 1,4,0 }
-    };*/
+    };
     
+   /*
     List<int[]> recepies = new List<int[]>
     {
         new int[] { 1,4,8,12,9,2,3,5,11,0, 10}, // Nanis 0
@@ -79,19 +80,7 @@ Raw/Burnt Meat 500
             if (CheckRecipe(obj, currentRecipeIndex))
             {
                 obj.Kill();
-                ChangeClient(currentRecipeIndex);
-                spawnSistem.orderFinished =  true;
-                patience.orderCompleated = true;
-
-                NumOfClients--;
-
-                CheckForRemainingClients();
-
-                RecipeWant.enabled = false;
-
-                RecipeWant.sprite = sprites[currentRecipeIndex];
-
-                Invoke(nameof(ReturnRecipe), 3);
+                CompleteOrder();
 
                 //Debug.Log("Burger served!");
             }
@@ -106,6 +95,39 @@ Raw/Burnt Meat 500
             //Debug.Log("Only burgers can be served!");
             obj.ReturnToSender();
         }
+    }
+
+    public void CompleteOrder()
+    {
+        Debug.Log("Order completed!");
+        ChangeClient(currentRecipeIndex);
+        spawnSistem.orderFinished = true;
+        patience.orderCompleated = true;
+
+        NumOfClients--;
+
+        CheckForRemainingClients();
+
+        RecipeWant.enabled = false;
+
+        RecipeWant.sprite = sprites[currentRecipeIndex];
+
+        Invoke(nameof(ReturnRecipe), 3);
+    }
+
+    public void CompleteOrder(DragAndDrop dragAndDrop)
+    {
+        if (CheckRecipe(dragAndDrop, currentRecipeIndex))
+        {
+            dragAndDrop.Kill();
+            CompleteOrder();
+        }
+        else
+        {
+            Debug.Log("Wrong burger served to client!");
+            //dragAndDrop.ReturnToSender();
+        }
+
     }
 
     void ReturnRecipe()
@@ -128,24 +150,7 @@ Raw/Burnt Meat 500
         currentRecipeIndex =  random;
 
         spawnSistem.SpawnCliente();
-        /*
-        if (lastclient < Clients.Length - 1)
-        {
-            lastclient++;
-        }
-        else
-        {
-            //currentRecipeIndex = random;
-            lastclient = 0;
-        }
-        //Debug.Log("Current recipe index: " + currentRecipeIndex);
-        //Debug.Log("Last client: " + lastclient);
-        // Set the new client active
-        for (int i = 0; i < Clients.Length; i++)
-        {
-            Clients[i].SetActive(i == lastclient);
-        }
-        */
+
     }
 
     private bool CheckRecipe(DragAndDrop obj, int recipeID)

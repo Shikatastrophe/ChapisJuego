@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using Unity.Android.Gradle;
 
 public class PatienceSystem : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class PatienceSystem : MonoBehaviour
     public TextMeshProUGUI tipText;
     int minutes;
     int seconds;
+
+    public ClientController clientController;
 
     void Start()
     {
@@ -50,6 +53,8 @@ public class PatienceSystem : MonoBehaviour
         {
             tip = 0;
             patienceTimer = 0;
+
+            clientController.CompleteOrder();
         }
     }
     public void CompleteOrder()
